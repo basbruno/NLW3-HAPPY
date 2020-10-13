@@ -1,0 +1,55 @@
+yarn install express
+yarn add @types/express -D
+node src/server.ts
+yarn add typescript -D
+yarn tsc --init [tsconfig.json "target":'Mudar de eS5 para "es2017"]
+yarn add ts-node-dev -D
+yard dev
+
+realizar o download do insominia
+
+BACK END
+
+
+
+server.ts [
+    import express from 'express';
+
+    const app = express();
+
+//rota=conjunto
+//recurso=usuario
+//metodo  HTTP = GET, POST, PUT & DELETE
+//Parametros = "Query Params: http://localhost:3333/users?search=diego&page=2"(procure diego)
+                "Route Params: http://localhost:3333/users/1 "(identificar um recurso)
+                "Body http://localhost:3333/users?search=diego&page=2"(identificar um recurso)
+                    ex: Console log(request.query)(request.params)
+
+
+//GET= BUSCAR INFO
+//POST criando uma informação nova
+//PUT editando uma informação
+// DELETE = Deletando uma informação
+
+app.get('/users',(request,response) > {
+//console.log("teste");//
+    return response.json({message: 'Hello'});
+});
+
+    app.listen(3333);
+
+
+
+]   //localhost:3333
+
+
+packge.json [
+
+"scripts":{
+    "dev":"ts-node-dev --transpile-only --ignore-watch node_modules  src/server.ts"
+}
+]
+
+
+
+
